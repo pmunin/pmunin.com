@@ -6,4 +6,5 @@
 function githubFile(fileUrl)
 {
     console.log("rendering code of github file:"+fileUrl);
+    document.write("<script src='http://gist-it.appspot.com/http://github.com/"+fileUrl+"'></script>")
 }
