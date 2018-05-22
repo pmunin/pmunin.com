@@ -1,6 +1,6 @@
 //script should be inserted before body tag closes
 
-//highlight by parameter
+//?highlight=text - highlight exact text
 (function(){
     let params = getJsonFromUrl();
     let highlightText = params&&params.highlight;
