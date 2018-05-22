@@ -10,5 +10,5 @@
     // https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js should be loaded in the head of template
     if(!Mark) return;
     var markInstance = new Mark("*");
-    markInstance.mark(highlightText, {separateWordSearch:false});
+    markInstance.mark(highlightText, {separateWordSearch:false, iframes:true});
 })();
