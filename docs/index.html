@@ -1,1 +1,123 @@
-This gh-pages repo served as a host for pmunin.com scripts and content
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<!-- <div style="position: fixed; z-index: -99; top: 0; left: 0; width: 100%; height: 100%">
+</div> -->
+<video autoplay loop id="videobcg" style="position: fixed; z-index: -99; top: 0; left: 0; width: 100%; height: 100%">
+    <source src="https://drive.google.com/uc?id=1lH84d6lg73PBxCbFnmhG_G_cPD95cC_2&export=download" type="video/webm">
+</video>
+
+<script>
+    function pausePlay()
+    {
+      /** 
+      @type {HTMLVideoElement}
+      */
+      var v = document.getElementById("videobcg");
+      if(v.paused) v.play();
+      else v.pause();
+    }
+</script>
+
+<div class="cap">
+    <div class="title">
+        This gh-pages repo served as a host for <a href="http://www.pmunin.com">pmunin.com</a>  scripts and content
+    </div>
+    <div>
+        <button onclick="pausePlay();" class="button"><i class="fas fa-play"></i> / <i class="fas fa-pause"></i></button>
+    </div>
+</div>
+<style>
+    body {
+  background: #fff;
+  margin: 0 0;
+  padding:10px;
+  text-align:center;
+}
+
+#videobcg { 
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   min-width: 100%;
+   min-height: 100%;
+   width: auto;
+   height: auto;
+   z-index: -1000;
+   overflow: hidden;
+    -webkit-filter: blur(15px);
+  -moz-filter: blur(15px);
+  -o-filter: blur(15px);
+  -ms-filter: blur(15px);
+  filter: blur(15px);
+}
+
+.title {
+  position:relative;
+	font-family: 'Open Sans','Helvetica Neue', Helvetica, sans serif;
+  font-weight:regular;
+  font-size: 14px;
+  text-shadow: 0px 1px 2px rgba(255,255,255,.125);
+  color: #121212;
+  text-align:center;
+}
+
+.cap {
+  margin-top:75px;
+  background: rgba(255,255,255, .55);
+  box-shadow: 0 1px 2px rgba(0,0,0, .25);
+  border-radius: 3px;
+  margin: 20px auto 0;
+  padding: 10px;
+  width: 525px;
+}
+
+/* form {
+  background: rgba(255,255,255, .55);
+  box-shadow: 0 1px 2px rgba(0,0,0, .25);
+  border-radius: 3px;
+  margin: 20px auto 0;
+  padding: 10px;
+  width: 525px;
+} */
+
+.button {
+  display: block;
+  font-size: 14px;
+  width:485px;
+  margin: 20px auto;
+  padding: 10px 8px 10px 8px;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 2px rgba(0,0,0, .55), 0px 1px 1px rgba(255,255,255,.5);
+  border: 1px solid #666;
+  opacity: 0.5;
+  appearance: none;
+  opacity: .99;
+  width:120px;
+  background: #484850;
+  box-shadow: inset 0 1px 2px rgba(255,255,255, .35), 0px 1px 6px rgba(0,0,0,,.5);
+  border: 1px (255,255,255, .35);
+  border-radius: 4px;
+  color: #eee;
+  cursor: pointer;
+  text-shadow:0px -1px 0px rgba(0,0,0,.5);
+}
+
+.button:hover,
+.button:focus {
+  opacity: .7;
+  color:#08c;
+  border: 1px solid #08c;
+   box-shadow: 0px 1px 0px rgba(255,255,255,.25),inset 0px 3px 6px rgba(0,0,0,.25);
+}
+
+.button:hover {
+  background: #08c;
+  width:120px;
+  border: 1px (255,255,255, .35);
+  border-radius: 3px;
+  box-shadow: inset 0px 3px 16px rgba(0,0,0,.25),0px 1px 10px rgba(255,255,255,.5),inset 0px -1px 2px rgba(255,255,255,.35);
+  text-shadow:0px 1px 1px rgba(0,0,0,.65);
+  -webkit-transition: all 0.40s ease-out;
+  transition: all 0.40s ease-out;
+}
+
+</style>
