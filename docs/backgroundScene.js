@@ -114,8 +114,19 @@ document.body.prepend(renderer.domElement);
 // ----
 
 const params = {
-    color: 130
+    color: 0
 };
+// const pane = new Pane({
+//     title: 'picker'
+// });
+// const options = {};
+// for (const [i, k] of names.entries()) {
+//     options[k] = i;
+// }
+// pane.addInput(params, 'color', {
+//     options
+// });
+// pane.on('change', () => cameraTo(params.color));
 
 function cameraTo(idx) {
     const m = new THREE.Matrix4();
@@ -128,8 +139,8 @@ function cameraTo(idx) {
     gsap.to(camera.position, {
         x: p1.x,
         y: p1.y,
-        z: p1.z,
-        duration: 3
+        z: p1.z + 1,
+        duration: 30
     });
 }
 
