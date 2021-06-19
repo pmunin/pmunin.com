@@ -109,26 +109,8 @@ addEventListener('resize', () => resize(innerWidth, innerHeight));
 dispatchEvent(new Event('resize'));
 document.body.prepend(renderer.domElement);
 
-// ----
-// gui
-// ----
 
-const params = {
-    color: Math.floor(Math.random() * 130)
-};
-// const pane = new Pane({
-//     title: 'picker'
-// });
-// const options = {};
-// for (const [i, k] of names.entries()) {
-//     options[k] = i;
-// }
-// pane.addInput(params, 'color', {
-//     options
-// });
-// pane.on('change', () => cameraTo(params.color));
-
-function cameraTo(idx) {
+function cameraTo(idx, duration) {
     const m = new THREE.Matrix4();
     mesh.getMatrixAt(idx, m);
     const p = new THREE.Vector3(); // mesh pos
@@ -140,8 +122,18 @@ function cameraTo(idx) {
         x: p1.x,
         y: p1.y,
         z: p1.z + 1,
-        duration: 30
+        duration: duration
     });
 }
 
-cameraTo(params.color);
+
+function startAnimation() {
+    const duration = 10 + Math.floor(Math.random() * 30) //10-40 secs
+    const color = Math.floor(Math.random() * 130);
+    cameraTo(color, duration);
+    setTimeout(() => {
+        startAnimation();
+    }, duration * 1000)
+}
+
+startAnimation();
