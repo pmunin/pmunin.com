@@ -114,7 +114,7 @@ document.body.prepend(renderer.domElement);
 // ----
 
 const params = {
-    color: 0
+    color: Math.floor(Math.random() * 130)
 };
 // const pane = new Pane({
 //     title: 'picker'
