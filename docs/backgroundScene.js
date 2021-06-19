@@ -22,9 +22,9 @@ import {
 // const
 // ----
 
-const CH = 48; // cyl height
-const CR = 44; // cyl radius
-const IR = 0.525; // ico radius
+const CH = 80; // cyl height
+const CR = 80; // cyl radius
+const IR = 0.225; // ico radius
 const FO = 0.1; // focus
 
 // ----
@@ -33,7 +33,7 @@ const FO = 0.1; // focus
 
 const renderer = new THREE.WebGLRenderer();
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, 2, .1, 100);
+const camera = new THREE.PerspectiveCamera(75, 2, .1, 1000);
 const controls = new OrbitControls(camera, renderer.domElement);
 
 
